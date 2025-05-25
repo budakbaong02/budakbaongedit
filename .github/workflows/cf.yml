@@ -2,7 +2,16 @@ name: cf workers
 
 on:
   workflow_dispatch:
-
+   inputs:
+      WORKER_NAME:
+        description: "🌟 Name of your worker"
+        required: true
+        type: string
+      DOMAIN_NAME:
+        description: "🏠 Name of your domain (not subdomain) at Cloudflare"
+        required: true
+        type: string
+        default: xxx.us.kg
   push:
     branches:
       - master
